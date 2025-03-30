@@ -1,0 +1,22 @@
+---
+title: "NCAA Cross Country Championships Dashboard"
+image: "ncaa_cc_dashboard_image.png"
+categories:
+  - Shiny App
+  - Dashboard
+  - Running
+---
+
+## About
+
+I built this dashboard to make it easy for fans to explore historical data from the NCAA Cross Country Championships.
+
+Use the app here: 
+<a href="https://timfulton.shinyapps.io/NCAA_Cross_Dashboard/" target="_blank">https://timfulton.shinyapps.io/NCAA_Cross_Dashboard/</a>
+
+Check out the GitHub repo here: 
+<a href="https://github.com/timfulton1/ncaa_cross_champs_dashboard" target="_blank">https://github.com/timfulton1/ncaa_cross_champs_dashboard/</a>
+
+<br>
+
+![](ncaa_cc_dashboard_image.png){fig-align="center" width="90%"}

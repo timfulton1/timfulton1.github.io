@@ -1,0 +1,15 @@
+---
+title: "Keep Hope Alive White Paper"
+image: "keep_hope_alive_image.png"
+categories:
+  - White Paper
+  - Student Success
+---
+
+## About
+
+I wrote this white paper while working as a Senior Data Analyst at the National Institute for Student Success (NISS), a higher education consulting agency housed within Georgia State University. 
+
+<br>
+
+![](KHA_Report.pdf){fig-align="center" width="65%" height="900px"}

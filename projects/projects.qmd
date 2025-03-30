@@ -1,0 +1,22 @@
+---
+title: Projects
+listing: 
+  contents: 
+    - "intensity_duration_app/*.qmd"
+    - "mile_scrollytelling/*.qmd"
+    - "hhb_app/*.qmd"
+    - "ncaa_cc_dashboard/*.qmd"
+    - "aging_cs/*.qmd"
+    - "nitric_oxide_app/*.qmd"
+    - "keep_hope_alive/*.qmd"
+  type: grid
+  categories: numbered
+  max-description-length: 245
+  sort: date
+  #fields: [image, title, categories]
+page-layout: full
+---
+
+#### Some of my data science and research projects 
+
+<br>

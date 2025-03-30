@@ -1,0 +1,15 @@
+---
+title: "NCAA Mile"
+#image: "ncaa_cc_dashboard_image.png"
+categories:
+  - Data Journalism
+  - Scrollytelling
+  - Running
+---
+
+## About
+
+A story about fast milers. 
+
+
+

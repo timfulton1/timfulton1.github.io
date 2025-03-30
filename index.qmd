@@ -1,0 +1,30 @@
+---
+title: "Tim Fulton"
+subtitle: "Data Scientist"
+image: headshot.jpg
+about:
+  template: solana
+  image-shape: round
+  image-width: 22em
+  links:
+    - icon: github
+      #text: Github
+      href: https://github.com/timfulton1
+      target: _blank
+    - icon: linkedin
+      #text: LinkedIn
+      href: https://linkedin.com/in/timothyjfulton
+      target: _blank
+---
+
+Hi, I'm Tim. Welcome to my website!
+
+After earning my PhD and studying the physiological factors that impact human performance across the lifespan, I transitioned to a career in data science - the scientific method and the data science life cycle are very similar!
+
+I enjoy creating visualizations and reports that tell compelling stories and help people better understand data. I also develop tools that allow others to efficiently analyze their own data and am passionate about teaching data science skills that empower people to complete their own data projects.
+
+Throughout the site you will find examples of my work, including data visualizations, Shiny applications, and written reports. I hope to add tutorials soon! Please message me on LinkedIn with any questions.
+
+Thanks for visiting!
+
+

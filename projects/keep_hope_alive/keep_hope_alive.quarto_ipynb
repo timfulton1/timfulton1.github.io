@@ -1,0 +1,39 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Keep Hope Alive White Paper\"\n",
+        "image: \"keep_hope_alive_image.png\"\n",
+        "categories:\n",
+        "  - White Paper\n",
+        "  - Student Success\n",
+        "---\n",
+        "\n",
+        "\n",
+        "## Background\n",
+        "\n",
+        "I wrote this white paper while working as a Senior Data Analyst at the National Institute for Student Success, a higher education consulting agency housed within Georgia State University. The goal of the paper was to determine the effect of receiving a Keep HOPE Alive scholarship on the likelihood of regaining the HOPE scholarship and graduating.\n",
+        "\n",
+        "\n",
+        "\n",
+        "```{html}\n",
+        "<embed src=\"KHA_Report.pdf\" width=\"800px\" height=\"2100px\" />\n",
+        "```"
+      ],
+      "id": "07306103"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/opt/anaconda3/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

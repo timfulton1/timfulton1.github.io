@@ -1,0 +1,20 @@
+[
+  {
+    "listing": "/projects/projects.html",
+    "items": [
+      "/projects/intensity_duration_app/intensity_duration_app.html",
+      "/projects/mile_scrollytelling/mile_scrolly.html",
+      "/projects/hhb_app/hhb_app.html",
+      "/projects/ncaa_cc_dashboard/ncaa_cc_dashboard.html",
+      "/projects/aging_cs/aging_cs.html",
+      "/projects/nitric_oxide_app/nitric_oxide_app.html",
+      "/projects/keep_hope_alive/keep_hope_alive.html"
+    ]
+  },
+  {
+    "listing": "/office_hours/office_hours.html",
+    "items": [
+      "/office_hours/dumbbell_plot/hope_tutorial.html"
+    ]
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "objectID": "extras/time_trial_app/time_trial_app.html",
+    "href": "extras/time_trial_app/time_trial_app.html",
+    "title": "Cycling Time Trial Analysis",
+    "section": "",
+    "text": "I built this app to use during an R Shiny workshop for graduate student researchers. The workshop introduces students to a variety of Shiny concepts and features."
+  },
+  {
+    "objectID": "extras/time_trial_app/time_trial_app.html#about",
+    "href": "extras/time_trial_app/time_trial_app.html#about",
+    "title": "Cycling Time Trial Analysis",
+    "section": "",
+    "text": "I built this app to use during an R Shiny workshop for graduate student researchers. The workshop introduces students to a variety of Shiny concepts and features."
+  },
+  {
+    "objectID": "extras/time_trial_app/time_trial_app.html#learning-objectives",
+    "href": "extras/time_trial_app/time_trial_app.html#learning-objectives",
+    "title": "Cycling Time Trial Analysis",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nThe learning objectives for the workshop include:\n\nUI layout and theme: Using a navigation bar, sidebar, layout columns, tooltips, and card components\nInput Widgets: Uploading data files and user selections\nReactive programming: Observing events and dynamic updates\nData analysis: Using dplyr functions for cleaning and summarizing\nVisualization: Creating interactive plots with ggplot2 and plotly\nFile Download: Using downloadHandler to allow users download the processed data"
+  },
+  {
+    "objectID": "extras/time_trial_app/time_trial_app.html#use",
+    "href": "extras/time_trial_app/time_trial_app.html#use",
+    "title": "Cycling Time Trial Analysis",
+    "section": "Use",
+    "text": "Use\nUse the app here: https://timfulton.shinyapps.io/Cycling_Time_Trial_App/\nCheck out the GitHub repo here: https://github.com/timfulton1/cycling_time_trial_app"
+  },
+  {
+    "objectID": "office_hours/dumbbell_plot/hope_tutorial.html",
+    "href": "office_hours/dumbbell_plot/hope_tutorial.html",
+    "title": "Dumbbell Visualization Tutorial",
+    "section": "",
+    "text": "This tutorial will demonstrate how to create a dumbbell plot, a type of plot that is useful for comparing the difference between 2 groups.\nWe will make a simple plot that is easy to digest by leadership\nThis visualization will represent graduation rates for different cohorts, comparing two groups: HOPE Scholars and Non-HOPE Scholars. We’ll cover loading required packages, loading and cleaning data, and building the plot step by step. The data are linked here: HOPE Data"
+  },
+  {
+    "objectID": "office_hours/dumbbell_plot/hope_tutorial.html#introduction",
+    "href": "office_hours/dumbbell_plot/hope_tutorial.html#introduction",
+    "title": "Dumbbell Visualization Tutorial",
+    "section": "",
+    "text": "This tutorial will demonstrate how to create a dumbbell plot, a type of plot that is useful for comparing the difference between 2 groups.\nWe will make a simple plot that is easy to digest by leadership\nThis visualization will represent graduation rates for different cohorts, comparing two groups: HOPE Scholars and Non-HOPE Scholars. We’ll cover loading required packages, loading and cleaning data, and building the plot step by step. The data are linked here: HOPE Data"
+  },
+  {
+    "objectID": "office_hours/dumbbell_plot/hope_tutorial.html#load-packages",
+    "href": "office_hours/dumbbell_plot/hope_tutorial.html#load-packages",
+    "title": "Dumbbell Visualization Tutorial",
+    "section": "Load packages",
+    "text": "Load packages\nTo begin, load the following R packages.\n\nlibrary(readxl) \nlibrary(dplyr) \nlibrary(tidyr) \nlibrary(ggplot2) \nlibrary(glue)\n\nreadxl helps us load data from Excel files. dplyr and tidyr are used for data cleaning and manipulation. ggplot2 is the core package for creating plots. glue is used to format text in our plot labels. 2. Load Data"
+  },
+  {
+    "objectID": "office_hours/dumbbell_plot/hope_tutorial.html#read-in-the-data",
+    "href": "office_hours/dumbbell_plot/hope_tutorial.html#read-in-the-data",
+    "title": "Dumbbell Visualization Tutorial",
+    "section": "Read in the Data",
+    "text": "Read in the Data\nNext, load the data using the read_excel() function from the {readxl} package. This loads the data from the Excel file located at “01_data/gsu_demo_data.xlsx” and assigns it to a variable hope_raw.\n\nhope_raw &lt;- read_excel(\"01_data/gsu_demo_data.xlsx\")"
+  },
+  {
+    "objectID": "office_hours/dumbbell_plot/hope_tutorial.html#clean-the-data",
+    "href": "office_hours/dumbbell_plot/hope_tutorial.html#clean-the-data",
+    "title": "Dumbbell Visualization Tutorial",
+    "section": "Clean the data",
+    "text": "Clean the data\nNext, clean and prepare the data for visualization. We filter out any rows with missing values in the hope_60 column, group the data by cohort and hope_60, and calculate the graduation rates for each group.\n\nhope_grad_60 &lt;- hope_raw %&gt;% \n  drop_na(hope_60) %&gt;% \n  group_by(cohort, hope_60) %&gt;% \n  summarise(hope_60_count = n(), grad_count = sum(grad)) %&gt;% \n  mutate(grad_percent = round(grad_count / hope_60_count * 100)) \n\nHere’s a breakdown of the steps:\ndrop_na(hope_60): Removes rows where the hope_60 column has missing values. group_by(cohort, hope_60): Groups the data by cohort and hope_60 (the scholarship status). summarise(): Calculates the number of students in each group and the number of graduates (grad_count). mutate(): Creates a new column grad_percent to store the graduation percentage for each group. After cleaning, we now have a dataset ready for plotting (hope_grad_60)."
+  },
+  {
+    "objectID": "office_hours/dumbbell_plot/hope_tutorial.html#create-the-plot",
+    "href": "office_hours/dumbbell_plot/hope_tutorial.html#create-the-plot",
+    "title": "Dumbbell Visualization Tutorial",
+    "section": "Create the Plot",
+    "text": "Create the Plot\nNow, let’s create the plot step by step. We’ll start by building the basic structure and then add components like geom layers, scales, and themes.\nBasic Plot Structure The foundation of the plot is created using the ggplot() function, which defines the data and aesthetic mappings.\n\nplot_dumbbell &lt;- ggplot(data = hope_grad_60, mapping = aes(x = cohort, y = grad_percent)) + \n  geom_line(\n    aes(group = cohort), \n    color = \"darkgray\", \n    linewidth = 1\n  ) + \n  geom_point(\n    aes(color = factor(hope_60)), \n    size = 7\n  ) + \n  geom_text(\n    aes(label = glue(\"{grad_percent}\")), \n    color = \"white\", \n    size = 3\n  )\n\nplot_dumbbell\n\n\n\n\n\n\n\n\ndata = hope_grad_60: We specify the cleaned data to use. mapping = aes(x = cohort, y = grad_percent, color = factor(hope_60)): We map the cohort to the x-axis, grad_percent to the y-axis, and hope_60 to the color of the points and lines. geom_line(): Adds a line connecting the points. We set it to darkgray for better contrast. geom_point(): Adds points to the plot with a size of 7. geom_text(): Adds text labels showing the grad_percent value, formatted using the glue() function. 4.2 Scales and Customization Next, we modify the scales and labels to ensure they display in a meaningful way.\n\nplot_dumbbell &lt;- plot_dumbbell + \n  scale_y_continuous(\n    limits = c(0, 100), \n    breaks = seq(0, 100, 20), \n    labels = function(x) paste0(x, \"%\")\n  ) +\n  scale_color_manual(\n    values = c(\"#58595B\", \"#0554A3\"), \n    labels = c(\"Non-HOPE\", \"HOPE Scholar\")\n  ) + \n  guides(color = guide_legend(override.aes = list(size = 6), reverse = TRUE))\n\nplot_dumbbell\n\n\n\n\n\n\n\n\nscale_y_continuous(): Adjusts the y-axis to display from 0 to 100% graduation rates, with breaks every 20%. scale_color_manual(): Customizes the colors for the two groups (Non-HOPE and HOPE Scholar). guides(): Customizes the color legend by adjusting the size of the legend keys and reversing the order. 4.3 Themes and Aesthetics Finally, we refine the appearance of the plot by applying a clean theme and customizing other aesthetic elements.\n\nplot_dumbbell &lt;- plot_dumbbell + \n  labs(y = \"Graduation Rate\") + \n  theme_classic(base_size = 14) + \n  theme(\n    axis.title.x = element_blank(), \n    axis.title.y = element_text(color = \"black\"), \n    axis.text.x = element_text(color = \"black\", margin = margin(t = 5)),\n    axis.text.y = element_text(color = \"black\"), \n    axis.ticks.x = element_blank(), \n    legend.title = element_blank(), \n    legend.position = \"top\", \n    legend.text = element_text(size = 10)\n  )\n\nplot_dumbbell\n\n\n\n\n\n\n\n\nlabs(): Sets the label for the y-axis as “Graduation Rate”. theme_classic(): Applies a simple, clean theme with a base size of 14 for text. theme(): Customizes various elements like axis titles, axis text, and legend appearance. 5. Display the Plot"
+  },
+  {
+    "objectID": "office_hours/dumbbell_plot/hope_tutorial.html#conclusion",
+    "href": "office_hours/dumbbell_plot/hope_tutorial.html#conclusion",
+    "title": "Dumbbell Visualization Tutorial",
+    "section": "Conclusion",
+    "text": "Conclusion\nIn this tutorial, we walked through the process of creating a dumbbell plot in R using the ggplot2 package. We covered:\nLoading necessary packages for data manipulation and visualization. Loading and cleaning the data to prepare it for visualization. Building the plot by adding geom layers for lines, points, and text, customizing scales, and refining the appearance using themes. By following these steps, you can create informative and visually appealing plots to represent your data effectively."
+  },
+  {
+    "objectID": "projects/ncaa_cc_dashboard/ncaa_cc_dashboard.html",
+    "href": "projects/ncaa_cc_dashboard/ncaa_cc_dashboard.html",
+    "title": "NCAA Cross Country Championships Dashboard",
+    "section": "",
+    "text": "I built this dashboard to make it easy for fans to explore historical data from the NCAA Cross Country Championships.\nUse the app here: https://timfulton.shinyapps.io/NCAA_Cross_Dashboard/\nCheck out the GitHub repo here: https://github.com/timfulton1/ncaa_cross_champs_dashboard/"
+  },
+  {
+    "objectID": "projects/ncaa_cc_dashboard/ncaa_cc_dashboard.html#about",
+    "href": "projects/ncaa_cc_dashboard/ncaa_cc_dashboard.html#about",
+    "title": "NCAA Cross Country Championships Dashboard",
+    "section": "",
+    "text": "I built this dashboard to make it easy for fans to explore historical data from the NCAA Cross Country Championships.\nUse the app here: https://timfulton.shinyapps.io/NCAA_Cross_Dashboard/\nCheck out the GitHub repo here: https://github.com/timfulton1/ncaa_cross_champs_dashboard/"
+  },
+  {
+    "objectID": "projects/mile_scrollytelling/mile_scrolly.html",
+    "href": "projects/mile_scrollytelling/mile_scrolly.html",
+    "title": "NCAA Mile",
+    "section": "",
+    "text": "A story about fast milers."
+  },
+  {
+    "objectID": "projects/mile_scrollytelling/mile_scrolly.html#about",
+    "href": "projects/mile_scrollytelling/mile_scrolly.html#about",
+    "title": "NCAA Mile",
+    "section": "",
+    "text": "A story about fast milers."
+  },
+  {
+    "objectID": "projects/projects.html",
+    "href": "projects/projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Some of my data science and research projects\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCritical Power/Speed Calculator\n\n\n\nShiny App\n\n\nCycling\n\n\nRunning\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNCAA Mile\n\n\n\nData Journalism\n\n\nScrollytelling\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeoxyhemoglobin Analysis\n\n\n\nShiny App\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNCAA Cross Country Championships Dashboard\n\n\n\nShiny App\n\n\nDashboard\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAging & Critical Speed Research Paper\n\n\n\nResearch Paper\n\n\nPhysiology\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNitric Oxide Analysis\n\n\n\nShiny App\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKeep Hope Alive White Paper\n\n\n\nWhite Paper\n\n\nStudent Success\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/aging_cs/aging_cs.html",
+    "href": "projects/aging_cs/aging_cs.html",
+    "title": "Aging & Critical Speed Research Paper",
+    "section": "",
+    "text": "I completed this study during my postdoctoral fellowship. The purpose of the study was to determine how aging alters the critical speed of top Master’s runners."
+  },
+  {
+    "objectID": "projects/aging_cs/aging_cs.html#about",
+    "href": "projects/aging_cs/aging_cs.html#about",
+    "title": "Aging & Critical Speed Research Paper",
+    "section": "",
+    "text": "I completed this study during my postdoctoral fellowship. The purpose of the study was to determine how aging alters the critical speed of top Master’s runners."
+  },
+  {
+    "objectID": "data_viz_gallery/data_viz_gallery.html",
+    "href": "data_viz_gallery/data_viz_gallery.html",
+    "title": "Data Viz Gallery",
+    "section": "",
+    "text": "Static Visualizations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDynamic Visualizations"
+  },
+  {
+    "objectID": "projects/hhb_app/hhb_app.html",
+    "href": "projects/hhb_app/hhb_app.html",
+    "title": "Deoxyhemoglobin Analysis",
+    "section": "",
+    "text": "This app performs kinetic modeling of deoxyhemoglobin (HHb) data obtained using near-infrared spectroscopy. The metrics that are calculated provide estimates of microvascular function during the transition from rest to exercise.\nI developed the app during my postdoctoral fellowship to improve data analysis accuracy and efficiency. Prior to using this app the research lab was using a software called SigmaPlot to perform the analysis. Although SigmaPlot is commonly used in research labs for modeling and graphing, it requires the user to click through a long sequence of prompts; thus, it takes more time and is prone to user error. The software licesnes are also relatively expensive. Switching to this app cut our analysis time in half (at least) and improved data quality."
+  },
+  {
+    "objectID": "projects/hhb_app/hhb_app.html#about",
+    "href": "projects/hhb_app/hhb_app.html#about",
+    "title": "Deoxyhemoglobin Analysis",
+    "section": "",
+    "text": "This app performs kinetic modeling of deoxyhemoglobin (HHb) data obtained using near-infrared spectroscopy. The metrics that are calculated provide estimates of microvascular function during the transition from rest to exercise.\nI developed the app during my postdoctoral fellowship to improve data analysis accuracy and efficiency. Prior to using this app the research lab was using a software called SigmaPlot to perform the analysis. Although SigmaPlot is commonly used in research labs for modeling and graphing, it requires the user to click through a long sequence of prompts; thus, it takes more time and is prone to user error. The software licesnes are also relatively expensive. Switching to this app cut our analysis time in half (at least) and improved data quality."
+  },
+  {
+    "objectID": "projects/hhb_app/hhb_app.html#methods",
+    "href": "projects/hhb_app/hhb_app.html#methods",
+    "title": "Deoxyhemoglobin Analysis",
+    "section": "Methods",
+    "text": "Methods\nThe data are fit using a monoexponential model with a time delay according to the equation below:\n\\[\nHHb = {HHb}_{baseline} + \\Delta{HHb} \\cdot (1 - e^{[-(t - TD) / \\tau]})\n\\]\nwhere HHb is the HHb at any time t, HHbbaselineis the average HHb during the 30 seconds of rest prior to exercise, \\(\\Delta\\) HHb is the difference between the baseline and the steady state amplitude at 60 seconds, t is the time, TD is the time delay, and \\(\\tau\\) (tau) is the time taken to reach 63% of the steady state amplitude.\nThree additional variables that are calculated are:\n\nResponse Time - The sum of the time delay and the tau.\nOvershoot - The difference between the amplitude and the average HHb over the final 15 seconds of exercise.\nRMSE - The root mean squared error of the fit.\n\nThe timespan of the data used will range from the first fitting point to 60 seconds."
+  },
+  {
+    "objectID": "projects/hhb_app/hhb_app.html#use",
+    "href": "projects/hhb_app/hhb_app.html#use",
+    "title": "Deoxyhemoglobin Analysis",
+    "section": "Use",
+    "text": "Use\nUse the app here: https://timfulton.shinyapps.io/HHb_Analysis_App/\nCheck out the GitHub repo here: https://github.com/timfulton1/hhb_app"
+  },
+  {
+    "objectID": "projects/intensity_duration_app/intensity_duration_app.html",
+    "href": "projects/intensity_duration_app/intensity_duration_app.html",
+    "title": "Critical Power/Speed Calculator",
+    "section": "",
+    "text": "I built this app to make it easy for athletes to determine their critical power or critical speed."
+  },
+  {
+    "objectID": "projects/intensity_duration_app/intensity_duration_app.html#about",
+    "href": "projects/intensity_duration_app/intensity_duration_app.html#about",
+    "title": "Critical Power/Speed Calculator",
+    "section": "",
+    "text": "I built this app to make it easy for athletes to determine their critical power or critical speed."
+  },
+  {
+    "objectID": "projects/intensity_duration_app/intensity_duration_app.html#physiological-background",
+    "href": "projects/intensity_duration_app/intensity_duration_app.html#physiological-background",
+    "title": "Critical Power/Speed Calculator",
+    "section": "Physiological Background",
+    "text": "Physiological Background\nThe sustainable duration of exercise is dependent upon the intensity (i.e., power or speed) at which the exercise is performed. This fundamental concept is known as the intensity-duration relationship, and for exercise durations of ~2–40 minutes, can be modeled by a two-parameter hyperbolic equation (see methods below). The critical intensity (power or speed) is the highest intensity that can be sustained primarily by aerobic metabolism while still achieving a metabolic steady state. The critical intensity is also a metabolic threshold such that exercising at intensities (powers or speeds) above the threshold will cause increased reliance on anaerobic metabolism and a greater accumulation of fatigue-inducing metabolites. For a given intensity above the threshold, the time until task failure is dependent on the magnitude of the curvature constant (W’ or D’), suggesting that curvature constant can be viewed as a fatigue buffer (or fatigue constant)."
+  },
+  {
+    "objectID": "projects/intensity_duration_app/intensity_duration_app.html#methods",
+    "href": "projects/intensity_duration_app/intensity_duration_app.html#methods",
+    "title": "Critical Power/Speed Calculator",
+    "section": "Methods",
+    "text": "Methods\n\nCycling\nThe data are fit using a two parameter hyperbolic model according to the equation below:\n\\[\nt = \\frac{W'}{P - CP} \\\n\\]\nwhere t is the performance time (s), W’ is the curvature constant (Joules), P is the performance power (W), and CP is the Critical Power (W).\nTwo additional variables that are calculated in the application are:\n\n5 minute Power - An estimate of the highest power that can be sustained for 5 minutes.\n20 minute Power - An estimate of the highest power that can be sustained for 20 minutes.\n\n\n\nRunning\nThe data are fit using a two parameter hyperbolic model according to the equation below:\n\\[\nt = \\frac{D'}{S - CS} \\\n\\]\nwhere t is the performance time (s), D’ is the curvature constant (m), S is the average speed (m/s), and CS is the critical speed (m/s).\nTwo additional variables that are calculated in the application are:\n\nMile - Estimated one mile performance.\n5,000 m - Estimated 5K performance."
+  },
+  {
+    "objectID": "projects/intensity_duration_app/intensity_duration_app.html#use",
+    "href": "projects/intensity_duration_app/intensity_duration_app.html#use",
+    "title": "Critical Power/Speed Calculator",
+    "section": "Use",
+    "text": "Use\nUse the app here: https://timfulton.shinyapps.io/critical_power_speed_calculator/\nCheck out the GitHub repo here: &lt;https://github.com/timfulton1/intensity_duration_app” target=“_blank”&gt;https://github.com/timfulton1/intensity_duration_app"
+  },
+  {
+    "objectID": "projects/keep_hope_alive/keep_hope_alive.html",
+    "href": "projects/keep_hope_alive/keep_hope_alive.html",
+    "title": "Keep Hope Alive White Paper",
+    "section": "",
+    "text": "I wrote this white paper while working as a Senior Data Analyst at the National Institute for Student Success (NISS), a higher education consulting agency housed within Georgia State University."
+  },
+  {
+    "objectID": "projects/keep_hope_alive/keep_hope_alive.html#about",
+    "href": "projects/keep_hope_alive/keep_hope_alive.html#about",
+    "title": "Keep Hope Alive White Paper",
+    "section": "",
+    "text": "I wrote this white paper while working as a Senior Data Analyst at the National Institute for Student Success (NISS), a higher education consulting agency housed within Georgia State University."
+  },
+  {
+    "objectID": "projects/nitric_oxide_app/nitric_oxide_app.html",
+    "href": "projects/nitric_oxide_app/nitric_oxide_app.html",
+    "title": "Nitric Oxide Analysis",
+    "section": "",
+    "text": "I developed this app during my postdoctoral fellowship for the analysis of blood plasma nitric oxide (NO) concentrations obtained using chemiluminescence."
+  },
+  {
+    "objectID": "projects/nitric_oxide_app/nitric_oxide_app.html#about",
+    "href": "projects/nitric_oxide_app/nitric_oxide_app.html#about",
+    "title": "Nitric Oxide Analysis",
+    "section": "",
+    "text": "I developed this app during my postdoctoral fellowship for the analysis of blood plasma nitric oxide (NO) concentrations obtained using chemiluminescence."
+  },
+  {
+    "objectID": "projects/nitric_oxide_app/nitric_oxide_app.html#methods",
+    "href": "projects/nitric_oxide_app/nitric_oxide_app.html#methods",
+    "title": "Nitric Oxide Analysis",
+    "section": "Methods",
+    "text": "Methods\nEach spike in the nitric oxide signal corresponds to an injection of blood plasma into the analyzer. A cubic spline is applied to smooth the raw data, and a baseline correction is performed to correct for signal drift and DC offset. The start, peak, and end time of each plasma injection is then identified, and the area under the curve (AUC) for each injection is calculated. The AUC values are displayed in the table on the left side, where they can also be downloaded."
+  },
+  {
+    "objectID": "projects/nitric_oxide_app/nitric_oxide_app.html#use",
+    "href": "projects/nitric_oxide_app/nitric_oxide_app.html#use",
+    "title": "Nitric Oxide Analysis",
+    "section": "Use",
+    "text": "Use\nUse the app here: https://timfulton.shinyapps.io/Nitric_Oxide_Analysis_App/\nCheck out the GitHub repo here: https://github.com/timfulton1/nitric_oxide_app"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Tim Fulton",
+    "section": "",
+    "text": "Hi, I’m Tim. Welcome to my website!\nAfter earning my PhD and studying the physiological factors that impact human performance across the lifespan, I transitioned to a career in data science - the scientific method and the data science life cycle are very similar!\nI enjoy creating visualizations and reports that tell compelling stories and help people better understand data. I also develop tools that allow others to efficiently analyze their own data and am passionate about teaching data science skills that empower people to complete their own data projects.\nThroughout the site you will find examples of my work, including data visualizations, Shiny applications, and written reports. I hope to add tutorials soon! Please message me on LinkedIn with any questions.\nThanks for visiting!"
+  },
+  {
+    "objectID": "office_hours/office_hours.html",
+    "href": "office_hours/office_hours.html",
+    "title": "Office Hours",
+    "section": "",
+    "text": "A collection of tutorials\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDumbbell Visualization Tutorial\n\n\n\n\n\n\nVisualization\n\n\nStudent Success\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  }
+]

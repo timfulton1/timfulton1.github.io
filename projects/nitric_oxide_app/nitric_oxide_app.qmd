@@ -1,0 +1,28 @@
+---
+title: "Nitric Oxide Analysis"
+image: "nitric_oxide_app_image.png"
+categories:
+  - Shiny App
+  - Physiology
+---
+
+## About
+
+I developed this app during my postdoctoral fellowship for the analysis of blood plasma nitric oxide (NO) concentrations obtained using chemiluminescence.
+
+## Methods
+
+Each spike in the nitric oxide signal corresponds to an injection of blood plasma into the analyzer. A cubic spline is applied to smooth the raw data, and a baseline correction is performed to correct for signal drift and DC offset. The start, peak, and end time of each plasma injection is then identified, and the area under the curve (AUC) for each injection is calculated. The AUC values are displayed in the table on the left side, where they can also be downloaded.
+
+## Use
+
+Use the app here: 
+<a href="https://timfulton.shinyapps.io/Nitric_Oxide_Analysis_App/" target="_blank">https://timfulton.shinyapps.io/Nitric_Oxide_Analysis_App/</a>
+
+Check out the GitHub repo here: 
+<a href="https://github.com/timfulton1/nitric_oxide_app" target="_blank">https://github.com/timfulton1/nitric_oxide_app</a>
+
+
+
+
+![](nitric_oxide_app_image.png){fig-align="center" width="90%"}

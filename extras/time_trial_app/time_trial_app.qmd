@@ -1,0 +1,41 @@
+---
+title: "Cycling Time Trial Analysis"
+image: "cycling_tt_app_image.png"
+categories:
+  - Shiny App
+  - Cycling
+  - Physiology
+
+---
+
+## About
+
+I built this app to use during an R Shiny workshop for graduate student researchers. The workshop introduces students to a variety of Shiny concepts and features.
+
+
+## Learning Objectives
+
+The learning objectives for the workshop include:
+
+-   **UI layout and theme:** Using a navigation bar, sidebar, layout columns, tooltips, and card components
+
+-   **Input Widgets:** Uploading data files and user selections
+
+-   **Reactive programming:** Observing events and dynamic updates
+
+-   **Data analysis:** Using `dplyr` functions for cleaning and summarizing
+
+-   **Visualization:** Creating interactive plots with `ggplot2` and `plotly`
+
+-   **File Download:** Using `downloadHandler` to allow users download the processed data
+
+
+## Use
+
+Use the app here: <https://timfulton.shinyapps.io/Cycling_Time_Trial_App/>
+
+Check out the GitHub repo here: <https://github.com/timfulton1/cycling_time_trial_app>
+
+<br>
+
+![](cycling_tt_app_image.png){fig-align="center" width="90%"}

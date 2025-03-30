@@ -1,0 +1,17 @@
+---
+title: "Aging & Critical Speed Research Paper"
+image: "aging_cs_image3.png"
+categories:
+  - Research Paper
+  - Physiology
+  - Running
+
+---
+
+## About
+
+I completed this study during my postdoctoral fellowship. The purpose of the study was to determine how aging alters the critical speed of top Master’s runners.
+
+<br>
+
+![](aging_cs.pdf){fig-align="center" width="65%" height="900px"}
