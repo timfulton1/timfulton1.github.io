@@ -3,11 +3,18 @@ project:
   output-dir: docs
 
 website:
-  #title: "Tim Fulton"
+  title: "Tim Fulton"
   open-graph: true 
   page-footer: 
     center: Made with [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank}, [Quarto](https://quarto.org/){target=_blannk}, and [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/timfulton1){target=_blank}
   navbar:
+    left: 
+      - icon: github
+        href: https://github.com/timfulton1
+        target: _blank
+      - icon: linkedin
+        href: https://linkedin.com/in/timothyjfulton
+        target: _blank
     right:
       - text: About
         href: index.qmd
@@ -17,10 +24,6 @@ website:
         href: data_viz_gallery/data_viz_gallery.qmd
       #- text: Office Hours
        # href: office_hours/office_hours.qmd
-      #- icon: github
-        #href: https://github.com/timfulton1
-        #target: _blank
-      
 format:
   html:
     theme: [flatly, styles.scss]

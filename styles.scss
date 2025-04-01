@@ -7,21 +7,22 @@ $font-family: "Atkinson Hyperlegible", sans-serif;
 
 
 // Themes
-$theme-primary: #094F42;  
+$theme-primary: #08374B;  
 $theme-secondary: #F8F8F8;
-$theme-link: #134B92; //#138F78;
+$theme-link: #A0B3B7; //#138F78;
+
+//$theme-primary: #094F42;  
+//$theme-secondary: #F8F8F8;
+//$theme-link: 363D3C#134B92;
 
 
 // Colors
-$navbar-bg: $theme-secondary;
-$navbar-fg: $theme-primary;
-$navbar-hl: black;
-
+$navbar-bg: $theme-primary;
+$navbar-fg: $theme-secondary;
+$navbar-hl: $theme-link;
 $body-bg: $theme-secondary;
 $body-color: $theme-primary;
-
 $link-color: $theme-link;
-
 
 
 
@@ -43,7 +44,6 @@ h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
 }
-
 
 
 // Cards and categories
@@ -74,7 +74,6 @@ h4, h5, h6 {
 }
 
 
-
 // Navbar Menu Animated Underline 
 
 .menu-text {
@@ -100,9 +99,17 @@ h4, h5, h6 {
   transform: scaleX(1);
 }
 
+.navbar .navbar-brand {
+    pointer-events: none;
+}
+
+.navbar-nav .nav-link:hover {
+    color: $theme-link;  
+}
 
 
 // Links 
+
 .about-links .bi {
     font-size: 1.5em; 
     color: $theme-primary;
