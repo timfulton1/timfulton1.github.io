@@ -2,8 +2,8 @@
 title: Data Viz Gallery
 page-layout: article
 lightbox: true
-toc: true
-toc-location: left
+#toc: true
+#toc-location: left
 ---
 
 <br>
@@ -212,6 +212,7 @@ girafe(
 <br>
 
 ```{r}
+#| include: false
 #| echo: false
 #| fig-width: 6
 #| fig-height: 4.2
