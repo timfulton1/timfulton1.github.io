@@ -212,7 +212,7 @@ girafe(
 <br>
 
 ```{r}
-#| include: false
+##| include: false
 #| echo: false
 #| fig-width: 6
 #| fig-height: 4.2
