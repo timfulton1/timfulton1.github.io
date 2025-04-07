@@ -1,5 +1,5 @@
 ---
-title: "NCAA Mile Scrollytelling"
+title: "The Super Spike Era: How Shoes Are Redefining the NCAA Mile"
 image: "plots/plot_grouped_rank_median_all.png"
 categories:
   - Data Journalism
@@ -50,7 +50,7 @@ From 2012 to 2021, the range of mile times remained fairly consistent year after
 ![](plots/plot_mile_decade.png){fig-align="center" width="90%"}
 :::
 
-During this period, the [**median** time hovered around 3:59]{style="color: #1E8449"}. @cr-plot_mile_median
+During this period, the [**median time hovered around 3:59**]{style="color: #1E8449"}. @cr-plot_mile_median
 
 ::: {#cr-plot_mile_median}
 ![](plots/plot_mile_median.png){fig-align="center" width="90%"}
