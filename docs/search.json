@@ -93,23 +93,16 @@
   {
     "objectID": "projects/mile_scrollytelling/mile_scrolly.html",
     "href": "projects/mile_scrollytelling/mile_scrolly.html",
-    "title": "NCAA Mile",
+    "title": "NCAA Mile Scrollytelling",
     "section": "",
-    "text": "A story about fast milers."
-  },
-  {
-    "objectID": "projects/mile_scrollytelling/mile_scrolly.html#about",
-    "href": "projects/mile_scrollytelling/mile_scrolly.html#about",
-    "title": "NCAA Mile",
-    "section": "",
-    "text": "A story about fast milers."
+    "text": "On February 1, 2025, University of North Carolina senior Ethan Strand ran a 3:48.32 mile. Strand’s performance set a new collegiate record and was the third-fastest indoor mile ever. Just a few years earlier, a performance like this from a collegian would have been unthinkable. However, in 2022, multiple shoe manufacturers released “super spikes”, enabling milers to run faster than ever before.\n\n\n\n\nTo understand the impact of super spikes, let’s look at the 50 fastest mile performances from 2012 to 2025, starting with 2012. Each circle represents the fastest mile time of a unique athlete during the year.\n\n\n\n\nFrom the runner with the fastest mile…\n\n\n\n\n…to the runner with the 50th fastest.\n\n\n\n\nFrom 2012 to 2021, the range of mile times remained fairly consistent year after year.\n\n\n\n\nDuring this period, the median time hovered around 3:59.\n\n\n\n\nThen, when super spikes became widely available in 2022, athletes began running significantly faster. The shoes had such a profound impact that the top 50 performances each year from 2022 to 2025 were all faster than the median performances from the previous decade.\n\n\n\n\nJust how much faster do super shoes make someone? Let’s first look at the 50th fastest performances. From 2012 to 2021 the median 50th fastest time was 4:01.60. From 2022 to 2025 the median 50th fastest time was to 3:57.95, a 3.7 second drop, or 1.5% improvement.\n\n\n\n\nThis pattern of improvement is consistent across other ranks, with an overall improvement of 3.7 seconds, or 1.5%.\n\n\n\n\nNCAA milers are faster than ever before, and yes, it’s the shoes. But it sure is fun to watch."
   },
   {
     "objectID": "projects/projects.html",
     "href": "projects/projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Some of my data science and research projects\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCritical Power/Speed Calculator\n\n\n\nShiny App\n\n\nCycling\n\n\nRunning\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNCAA Mile\n\n\n\nData Journalism\n\n\nScrollytelling\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeoxyhemoglobin Analysis\n\n\n\nShiny App\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNCAA Cross Country Championships Dashboard\n\n\n\nShiny App\n\n\nDashboard\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAging & Critical Speed Research Paper\n\n\n\nResearch Paper\n\n\nPhysiology\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNitric Oxide Analysis\n\n\n\nShiny App\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKeep Hope Alive White Paper\n\n\n\nWhite Paper\n\n\nStudent Success\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Some of my data science and research projects\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCritical Power/Speed Calculator\n\n\n\nShiny App\n\n\nCycling\n\n\nRunning\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNCAA Mile Scrollytelling\n\n\n\nData Journalism\n\n\nScrollytelling\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeoxyhemoglobin Analysis\n\n\n\nShiny App\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNCAA Cross Country Championships Dashboard\n\n\n\nShiny App\n\n\nDashboard\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAging & Critical Speed Research Paper\n\n\n\nResearch Paper\n\n\nPhysiology\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNitric Oxide Analysis\n\n\n\nShiny App\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKeep Hope Alive White Paper\n\n\n\nWhite Paper\n\n\nStudent Success\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/aging_cs/aging_cs.html",
@@ -193,7 +186,7 @@
     "href": "projects/intensity_duration_app/intensity_duration_app.html#use",
     "title": "Critical Power/Speed Calculator",
     "section": "Use",
-    "text": "Use\nUse the app here: https://timfulton.shinyapps.io/critical_power_speed_calculator/\nCheck out the GitHub repo here: &lt;https://github.com/timfulton1/intensity_duration_app” target=“_blank”&gt;https://github.com/timfulton1/intensity_duration_app"
+    "text": "Use\nUse the app here: https://timfulton.shinyapps.io/critical_power_speed_calculator/\nCheck out the GitHub repo here: https://github.com/timfulton1/intensity_duration_app"
   },
   {
     "objectID": "projects/keep_hope_alive/keep_hope_alive.html",
@@ -250,5 +243,12 @@
     "title": "Office Hours",
     "section": "",
     "text": "A collection of tutorials\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDumbbell Visualization Tutorial\n\n\n\n\n\n\nVisualization\n\n\nStudent Success\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/mile_scrollytelling/mile_scrolly.html#by-tim-fulton",
+    "href": "projects/mile_scrollytelling/mile_scrolly.html#by-tim-fulton",
+    "title": "NCAA Mile Scrollytelling",
+    "section": "",
+    "text": "On February 1, 2025, University of North Carolina senior Ethan Strand ran a 3:48.32 mile. Strand’s performance set a new collegiate record and was the third-fastest indoor mile ever. Just a few years earlier, a performance like this from a collegian would have been unthinkable. However, in 2022, multiple shoe manufacturers released “super spikes”, enabling milers to run faster than ever before.\nTo understand the impact of super spikes, let’s look at the 50 fastest mile performances from 2012 to 2025, starting with 2012. Each circle represents the fastest mile time of a unique athlete during the year. @cr-plot_mile_2012\n\n\n\n\n\n\n\nFrom the runner with the fastest mile… @cr-plot_mile_2012_1st\n\n\n\n\n\n\n\n…to the runner with the 50th fastest. @cr-plot_mile_2012_50th\n\n\n\n\n\n\n\nFrom 2012 to 2021, the range of mile times remained fairly consistent year after year. @cr-plot_mile_decade\n\n\n\n\n\n\n\nDuring this period, the median time hovered around 3:59. @cr-plot_mile_median\n\n\n\n\n\n\n\nThen, when super spikes became widely available in 2022, athletes began running significantly faster. The shoes had such a profound impact that the top 50 performances each year from 2022 to 2025 were all faster than the median performances from the previous decade. @cr-plot_mile_all\n\n\n\n\n\n\n\nJust how much faster do super shoes make someone? Let’s first look at the 50th fastest performances. From 2012 to 2021 the median 50th fastest time was 4:01.60. From 2022 to 2025 the median 50th fastest time was to 3:57.95, a 3.7 second drop, or 1.5% improvement. @cr-plot_mile_ranks_50th\n\n\n\n\n\n\n\nThis pattern of improvement is consistent across other ranks, with an overall improvement of 3.7 seconds, or 1.5%. @cr-plot_mile_ranks_all\n\n\n\n\n\n\n\nNCAA milers are faster than ever before, and yes, it’s the shoes. But it sure is fun to watch."
   }
 ]

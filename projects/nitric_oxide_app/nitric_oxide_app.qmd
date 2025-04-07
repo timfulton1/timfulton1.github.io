@@ -25,4 +25,4 @@ Check out the GitHub repo here:
 
 
 
-![](nitric_oxide_app_image.png){fig-align="center" width="90%"}
+![](nitric_oxide_app_image.png){fig-align="center" width="100%"}

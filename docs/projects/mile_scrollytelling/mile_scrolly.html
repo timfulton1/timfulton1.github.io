@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NCAA Mile</title>
+<title>NCAA Mile Scrollytelling – Tim Fulton</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,12 +33,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
+<script src="../../site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
+<script src="../../site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -68,10 +70,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta cr-debug-mode="false">
+<meta cr-remove-header-space="true">
 
 
-<meta property="og:title" content="NCAA Mile">
-<meta property="og:description" content="">
+<link rel="stylesheet" href="../../site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
+<meta property="og:title" content="NCAA Mile Scrollytelling – Tim Fulton">
+<meta property="og:image" content="plots/plot_grouped_rank_median_all.png">
+<meta property="og:site_name" content="Tim Fulton">
 </head>
 
 <body class="nav-fixed">
@@ -80,11 +86,28 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Tim Fulton</span>
+    </a>
+  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/timfulton1" target="_blank"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://linkedin.com/in/timothyjfulton" target="_blank"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
@@ -112,10 +135,21 @@ ul.task-list li input[type="checkbox"] {
     
 <!-- main -->
 <main class="content column-page" id="quarto-document-content">
+      <!-- user-provided yaml closeread style options -->
+      <style>
+        :root {
+          --cr-section-background-color: transparent;
+--cr-narrative-sidebar-width: 0.8fr;
+--cr-narrative-text-color-sidebar: #3B3C3C;
+--cr-narrative-background-color-sidebar: #ECEFF1;
+--cr-narrative-font-size: 1.5em;
+        }
+      </style>
+    
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">NCAA Mile</h1>
+<h1 class="title">NCAA Mile Scrollytelling</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Data Journalism</div>
     <div class="quarto-category">Scrollytelling</div>
@@ -137,12 +171,128 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="about" class="level2">
-<h2 class="anchored" data-anchor-id="about">About</h2>
-<p>A story about fast milers.</p>
-
-
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<section id="the-super-spike-era-how-shoes-are-redefining-the-ncaa-mile" class="level1 narrative trigger">
+<h1 class="narrative">The Super Spike Era: How Shoes Are Redefining the NCAA Mile</h1>
 </section>
+<section id="by-tim-fulton" class="level2 narrative trigger">
+<h2 class="narrative" data-anchor-id="by-tim-fulton">By Tim Fulton</h2>
+</section>
+<div class="trigger">
+<div class="narrative">
+<p>On February 1, 2025, University of North Carolina senior Ethan Strand ran a 3:48.32 mile. Strand’s performance set a new collegiate record and was the third-fastest indoor mile ever. Just a few years earlier, a performance like this from a collegian would have been unthinkable. However, in 2022, multiple shoe manufacturers released “super spikes”, enabling milers to run faster than ever before.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-plot_mile_2012">
+<div class="narrative">
+<p>To understand the impact of super spikes, let’s look at the 50 fastest mile performances from 2012 to 2025, starting with 2012. Each circle represents the fastest mile time of a unique athlete during the year.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-plot_mile_2012_1st">
+<div class="narrative">
+<p>From the runner with the <span style="color:#137CC3"><strong>fastest</strong></span> mile…</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-plot_mile_2012_50th">
+<div class="narrative">
+<p>…to the runner with the <span style="color:#E06715"><strong>50th fastest</strong></span>.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-plot_mile_decade">
+<div class="narrative">
+<p>From 2012 to 2021, the range of mile times remained fairly consistent year after year.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-plot_mile_median">
+<div class="narrative">
+<p>During this period, the <span style="color: #1E8449"><strong>median</strong> time hovered around 3:59</span>.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-plot_mile_all">
+<div class="narrative">
+<p>Then, when super spikes became widely available in 2022, athletes began running significantly faster. The shoes had such a profound impact that the top 50 performances each year from 2022 to 2025 were all faster than the median performances from the previous decade.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-plot_mile_ranks_50th">
+<div class="narrative">
+<p>Just how much faster do super shoes make someone? Let’s first look at the 50th fastest performances. <br><br>From <span style="color: #137CC3"><strong>2012 to 2021 the median 50th fastest time was 4:01.60</strong></span>. <br><br>From <span style="color: #E06715"><strong>2022 to 2025 the median 50th fastest time was to 3:57.95</strong></span>, a 3.7 second drop, or 1.5% improvement.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-plot_mile_ranks_all">
+<div class="narrative">
+<p>This pattern of improvement is consistent across other ranks, with an overall improvement of <strong>3.7 seconds, or 1.5%</strong>.</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>NCAA milers are faster than ever before, and yes, it’s the shoes. But it sure is fun to watch.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-plot_mile_2012" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/plot_mile_2012.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+<div id="cr-plot_mile_2012_1st" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/plot_mile_2012_1st.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+<div id="cr-plot_mile_2012_50th" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/plot_mile_2012_50th.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+<div id="cr-plot_mile_decade" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/plot_mile_decade.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+<div id="cr-plot_mile_median" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/plot_mile_median.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+<div id="cr-plot_mile_all" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/plot_mile_all.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+<div id="cr-plot_mile_ranks_50th" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/plot_grouped_rank_median_50.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+<div id="cr-plot_mile_ranks_all" class="sticky">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plots/plot_grouped_rank_median_all.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -165,13 +315,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

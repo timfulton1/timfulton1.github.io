@@ -41,4 +41,4 @@ Check out the GitHub repo here:
 
 <br> 
 
-![](hhb_app.png){fig-align="center" width="90%"}
+![](hhb_app.png){fig-align="center" width="100%"}

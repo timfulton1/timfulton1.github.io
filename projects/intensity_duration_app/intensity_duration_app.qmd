@@ -57,10 +57,10 @@ Use the app here:
 <a href="https://timfulton.shinyapps.io/critical_power_speed_calculator/" target="_blank">https://timfulton.shinyapps.io/critical_power_speed_calculator/</a>
 
 Check out the GitHub repo here: 
-<https://github.com/timfulton1/intensity_duration_app" target="_blank">https://github.com/timfulton1/intensity_duration_app</a>
+<a href="https://github.com/timfulton1/intensity_duration_app" target="_blank">https://github.com/timfulton1/intensity_duration_app</a>
 
 
-![](intensity_duration_app_image.png){fig-align=center width=90%}
+![](intensity_duration_app_image.png){fig-align=center width=100%}
 
 
 

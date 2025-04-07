@@ -1,6 +1,6 @@
 ---
 title: Data Viz Gallery
-page-layout: article
+page-layout: full
 lightbox: true
 #toc: true
 #toc-location: left
@@ -12,20 +12,20 @@ lightbox: true
 
 <br>
 
-![](assets/plot_aging_100.png){fig-align="center" fig-alt="A scatterplot that displays the number of athletes with sub 10 second performances across ages 18 to 40" group="my-gallery"}
+![](assets/plot_aging_100.png){fig-align="center" width=100% fig-alt="A scatterplot that displays the number of athletes with sub 10 second performances across ages 18 to 40" group="my-gallery"}
 
-![](assets/ncaa_cross_plot.png){fig-align="center" fig-alt="A scatterplot that displays the team who won the NCAA Cross Country Championshps each year" group="my-gallery"}
+![](assets/ncaa_cross_plot.png){fig-align="center" width=100% fig-alt="A scatterplot that displays the team who won the NCAA Cross Country Championshps each year" group="my-gallery"}
 
-![](assets/sub_4_facet_plot.png){fig-align="center" fig-alt="A line chart showing the increase in the number of sub 4 minute milers from each university over time" group="my-gallery"}
+![](assets/sub_4_facet_plot.png){fig-align="center" width="55%" fig-alt="A line chart showing the increase in the number of sub 4 minute milers from each university over time" group="my-gallery"}
 
-![](assets/steps_per_day.png){fig-align="center" fig-alt="Description of the image" group="my-gallery"}
+![](assets/steps_per_day.png){fig-align="center" width=90% fig-alt="Description of the image" group="my-gallery"}
 
-![](assets/sub44_400m_plot.png){fig-align="center" fig-alt="A bar graph showing the count of sub 44 second 400 meter performances for each athlete" group="my-gallery"}
+![](assets/sub44_400m_plot.png){fig-align="center" width=85% fig-alt="A bar graph showing the count of sub 44 second 400 meter performances for each athlete" group="my-gallery"}
 
 
-![](assets/steps_heatmap.png){fig-align="center" fig-alt="A heatmap that displays the number of steps walked each day throught the year" group="my-gallery"}
+![](assets/steps_heatmap.png){fig-align="center" width=80% fig-alt="A heatmap that displays the number of steps walked each day throught the year" group="my-gallery"}
 
-![](assets/endowments.png){fig-align="center" fig-alt="A tree map that displays university endowments" group="my-gallery"}
+![](assets/endowments.png){fig-align="center" width=90% fig-alt="A tree map that displays university endowments" group="my-gallery"}
 
 ### Dynamic Visualizations
 
@@ -47,8 +47,6 @@ library(ggiraph)
 
 ```{r}
 #| echo: false
-#| fig-width: 6
-#| fig-height: 7
 
 # Load data
 speed_duration <- read.csv("data/speed_duration_data.csv")
@@ -67,8 +65,8 @@ font_add_google("Roboto")
 showtext_auto()
 
 
-## Render plots
-# Scatter plot 
+# Render plots
+## Scatter plot 
 scatter_plot <- speed_duration %>% 
   ggplot(mapping = aes(x = d_prime, y = critical_speed, fill = gender, color = gender, tooltip = tooltip, data_id = (critical_speed + d_prime))) +
   theme_classic(base_size = 12) + 
@@ -103,7 +101,7 @@ scatter_plot <- speed_duration %>%
   )
 
 
-# x density plot
+## x density plot
 density_x <- speed_duration %>% 
   ggplot(mapping = aes(x = d_prime, fill = factor(gender), color = factor(gender))) +
   theme_void() + 
@@ -120,7 +118,7 @@ density_x <- speed_duration %>%
   scale_color_manual(values = c(color1, color2))
 
 
-# y density plot
+## y density plot
 density_y <- speed_duration %>% 
   ggplot(mapping = aes(x = critical_speed, fill = factor(gender), color = factor(gender))) +
   theme_void() + 
@@ -138,7 +136,7 @@ density_y <- speed_duration %>%
   scale_color_manual(values = c(color1, color2))
 
 
-# x boxplot 
+## x boxplot 
 boxplot_x <- speed_duration %>% 
   ggplot(mapping = aes(x = fct_rev(factor(gender)), y = d_prime, fill = factor(gender), color = factor(gender))) +
   theme_void() +
@@ -161,7 +159,7 @@ boxplot_x <- speed_duration %>%
   ) 
 
 
-# y boxplot 
+## y boxplot 
 boxplot_y <- speed_duration %>% 
   ggplot(mapping = aes(x = factor(gender), y = critical_speed, fill = factor(gender), color = factor(gender))) +
   theme_void() +
@@ -183,11 +181,11 @@ boxplot_y <- speed_duration %>%
   ) 
 
 
-# Use plotspacer to create grid with an invisible plot
+## Use plotspacer to create grid with an invisible plot
 grid_plot <- density_x + plot_spacer() + plot_spacer() + boxplot_x + plot_spacer() + plot_spacer() + scatter_plot + boxplot_y + density_y + plot_layout(ncol = 3, nrow = 3, widths = c(4, 0.5, 1), heights = c(1, 0.5, 4))
 
 
-# Add title and caption to grid plot
+## Add title and caption to grid plot
 final_plot <- grid_plot + plot_annotation(
   title = "Critical Speed is faster in men than women, but there is\nno sex difference in D'",
   caption = "Data: worldathletics.org; athletes had season best 1500m, 3000m, and 5000m performances of 1,100+ World Athletic\npoints from 2002-2021\nViz: Tim Fulton, PhD",
@@ -200,7 +198,10 @@ final_plot <- grid_plot + plot_annotation(
 # Render interactive plot
 girafe(
   ggobj = final_plot,
+  width_svg = 6,
+  height_svg = 7,
   options = list(
+    opts_sizing(rescale = TRUE, width = .65),
     opts_tooltip(use_fill = TRUE, opacity = 0.9),
     opts_hover(css = "stroke:red;stroke-width:1.5px;"),
     opts_toolbar(saveaspng = FALSE)
@@ -244,7 +245,7 @@ plot_demo <- ggplot(pop_data,  aes(fill = pop_category)) +
   theme_void() +
   theme(
     plot.background = element_rect(fill = "white", color = "white"),
-    plot.title = element_text(size = 13, face = "bold", hjust = 0.5, margin = margin(b = 2)),
+    plot.title = element_text(size = 12, face = "bold", hjust = 0.5, margin = margin(b = 2)),
     plot.caption = element_text(size = 7, color = "black", face = "italic", hjust = 0.02),
     legend.title = element_blank(),
     legend.key.size = unit(0.25, "cm"),

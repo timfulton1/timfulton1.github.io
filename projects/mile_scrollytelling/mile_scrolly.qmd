@@ -1,15 +1,79 @@
 ---
-title: "NCAA Mile"
-#image: "ncaa_cc_dashboard_image.png"
+title: "NCAA Mile Scrollytelling"
+image: "plots/plot_grouped_rank_median_all.png"
 categories:
   - Data Journalism
   - Scrollytelling
   - Running
+format:
+  closeread-html:
+    anchor-sections: false
+    remove-header-space: true
+    cr-style:
+      section-background-color: transparent
+      narrative-background-color-sidebar: "#ECEFF1"
+      narrative-font-size: 1.5em
+      narrative-text-color-sidebar: "#3B3C3C"
+      narrative-sidebar-width: 0.8fr
+    cr-section:
+       layout: "sidebar-left"
 ---
 
-## About
+::::::::::: cr-section
+# The Super Spike Era: How Shoes Are Redefining the NCAA Mile
 
-A story about fast milers. 
+## By Tim Fulton
 
+On February 1, 2025, University of North Carolina senior Ethan Strand ran a 3:48.32 mile. Strand's performance set a new collegiate record and was the third-fastest indoor mile ever. Just a few years earlier, a performance like this from a collegian would have been unthinkable. However, in 2022, multiple shoe manufacturers released "super spikes", enabling milers to run faster than ever before.
 
+To understand the impact of super spikes, let's look at the 50 fastest mile performances from 2012 to 2025, starting with 2012. Each circle represents the fastest mile time of a unique athlete during the year. @cr-plot_mile_2012
+
+::: {#cr-plot_mile_2012}
+![](plots/plot_mile_2012.png){fig-align="center" width="90%"}
+:::
+
+From the runner with the [**fastest**]{style="color:#137CC3"} mile... @cr-plot_mile_2012_1st
+
+::: {#cr-plot_mile_2012_1st}
+![](plots/plot_mile_2012_1st.png){fig-align="center" width="90%"}
+:::
+
+...to the runner with the [**50th fastest**]{style="color:#E06715"}. @cr-plot_mile_2012_50th
+
+::: {#cr-plot_mile_2012_50th}
+![](plots/plot_mile_2012_50th.png){fig-align="center" width="90%"}
+:::
+
+From 2012 to 2021, the range of mile times remained fairly consistent year after year. @cr-plot_mile_decade
+
+::: {#cr-plot_mile_decade}
+![](plots/plot_mile_decade.png){fig-align="center" width="90%"}
+:::
+
+During this period, the [**median** time hovered around 3:59]{style="color: #1E8449"}. @cr-plot_mile_median
+
+::: {#cr-plot_mile_median}
+![](plots/plot_mile_median.png){fig-align="center" width="90%"}
+:::
+
+Then, when super spikes became widely available in 2022, athletes began running significantly faster. The shoes had such a profound impact that the top 50 performances each year from 2022 to 2025 were all faster than the median performances from the previous decade. @cr-plot_mile_all
+
+::: {#cr-plot_mile_all}
+![](plots/plot_mile_all.png){fig-align="center" width="90%"}
+:::
+
+Just how much faster do super shoes make someone? Let's first look at the 50th fastest performances. <br><br>From [**2012 to 2021 the median 50th fastest time was 4:01.60**]{style="color: #137CC3"}. <br><br>From [**2022 to 2025 the median 50th fastest time was to 3:57.95**]{style="color: #E06715"}, a 3.7 second drop, or 1.5% improvement. @cr-plot_mile_ranks_50th
+
+::: {#cr-plot_mile_ranks_50th}
+![](plots/plot_grouped_rank_median_50.png){fig-align="center" width="90%"}
+:::
+
+This pattern of improvement is consistent across other ranks, with an overall improvement of **3.7 seconds, or 1.5%**. @cr-plot_mile_ranks_all
+
+::: {#cr-plot_mile_ranks_all}
+![](plots/plot_grouped_rank_median_all.png){fig-align="center" width="90%"}
+:::
+
+NCAA milers are faster than ever before, and yes, it's the shoes. But it sure is fun to watch.
+:::::::::::
 
