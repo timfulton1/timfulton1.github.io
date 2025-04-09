@@ -4,13 +4,14 @@ image: "plots/plot_grouped_rank_median_all.png"
 categories:
   - Data Journalism
   - Scrollytelling
+  - Quarto
   - Running
 format:
   closeread-html:
     anchor-sections: false
     remove-header-space: true
     cr-style:
-      section-background-color: transparent
+      section-background-color: "white"
       narrative-background-color-sidebar: "#ECEFF1"
       narrative-font-size: 1.5em
       narrative-text-color-sidebar: "#3B3C3C"
@@ -24,7 +25,11 @@ format:
 
 ## By Tim Fulton
 
-On February 1, 2025, University of North Carolina senior Ethan Strand ran a 3:48.32 mile. Strand's performance set a new collegiate record and was the third-fastest indoor mile ever. Just a few years earlier, a performance like this from a collegian would have been unthinkable. However, in 2022, multiple shoe manufacturers released "super spikes", enabling milers to run faster than ever before.
+On February 1, 2025, University of North Carolina senior Ethan Strand ran a 3:48.32 mile. Strand's performance set a new collegiate record and was the third-fastest indoor mile ever. Just a few years earlier, a performance like this from a collegian would have been unthinkable. However, in 2022, multiple shoe manufacturers released "super spikes", enabling milers to run faster than ever before. @cr-victory2
+
+::: {#cr-victory2}
+![](plots/victory2.png){fig-align="center" width="90%"}
+:::
 
 To understand the impact of super spikes, let's look at the 50 fastest mile performances from 2012 to 2025, starting with 2012. Each circle represents the fastest mile time of a unique athlete during the year. @cr-plot_mile_2012
 
