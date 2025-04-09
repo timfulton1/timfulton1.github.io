@@ -20,12 +20,12 @@ format:
        layout: "sidebar-left"
 ---
 
-::::::::::: cr-section
+:::::::::::: cr-section
 # The Super Spike Era: How Shoes Are Redefining the NCAA Mile
 
-## By Tim Fulton
+By Tim Fulton @cr-victory2
 
-On February 1, 2025, University of North Carolina senior Ethan Strand ran a 3:48.32 mile. Strand's performance set a new collegiate record and was the third-fastest indoor mile ever. Just a few years earlier, a performance like this from a collegian would have been unthinkable. However, in 2022, multiple shoe manufacturers released "super spikes", enabling milers to run faster than ever before. @cr-victory2
+On February 1, 2025, University of North Carolina senior Ethan Strand ran a 3:48.32 mile. Strand's performance set a new collegiate record and was the third-fastest indoor mile ever. Just a few years earlier, a performance like this from a collegian would have been unthinkable. However, in 2022, multiple shoe manufacturers released "super spikes", enabling milers to run faster than ever before.
 
 ::: {#cr-victory2}
 ![](plots/victory2.png){fig-align="center" width="90%"}
@@ -80,5 +80,4 @@ This pattern of improvement is consistent across other ranks, with an overall im
 :::
 
 NCAA milers are faster than ever before, and yes, it's the shoes. But it sure is fun to watch.
-:::::::::::
-
+::::::::::::
