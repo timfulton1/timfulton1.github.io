@@ -12,20 +12,22 @@ lightbox: true
 
 <br>
 
-![](assets/plot_aging_100.png){fig-align="center" width=100% fig-alt="A scatterplot that displays the number of athletes with sub 10 second performances across ages 18 to 40" group="my-gallery"}
+![](assets/plot_aging_100.png){fig-align="center" width=90% fig-alt="A scatterplot that displays the number of athletes with sub 10 second performances across ages 18 to 40" group="my-gallery"}
 
-![](assets/ncaa_cross_plot.png){fig-align="center" width=100% fig-alt="A scatterplot that displays the team who won the NCAA Cross Country Championshps each year" group="my-gallery"}
+![](assets/ncaa_cross_plot.png){fig-align="center" width=90% fig-alt="A scatterplot that displays the team who won the NCAA Cross Country Championshps each year" group="my-gallery"}
 
 ![](assets/sub_4_facet_plot.png){fig-align="center" width="55%" fig-alt="A line chart showing the increase in the number of sub 4 minute milers from each university over time" group="my-gallery"}
 
-![](assets/steps_per_day.png){fig-align="center" width=90% fig-alt="Description of the image" group="my-gallery"}
+![](assets/steps_per_day.png){fig-align="center" width=85% fig-alt="Description of the image" group="my-gallery"}
 
 ![](assets/sub44_400m_plot.png){fig-align="center" width=85% fig-alt="A bar graph showing the count of sub 44 second 400 meter performances for each athlete" group="my-gallery"}
+
+![](assets/mdh_plot.png){fig-align="center" width=60% fig-alt="A map that displays the areas of the state within a 75 mile drive distance of a Minnesota Department of Health office" group="my-gallery"}
 
 
 ![](assets/steps_heatmap.png){fig-align="center" width=80% fig-alt="A heatmap that displays the number of steps walked each day throught the year" group="my-gallery"}
 
-![](assets/endowments.png){fig-align="center" width=90% fig-alt="A tree map that displays university endowments" group="my-gallery"}
+![](assets/endowments.png){fig-align="center" width=85% fig-alt="A tree map that displays university endowments" group="my-gallery"}
 
 ### Dynamic Visualizations
 
@@ -42,6 +44,7 @@ library(forcats)
 library(showtext)
 library(glue)
 library(ggiraph)
+library(leaflet)
 
 ```
 
@@ -245,7 +248,7 @@ plot_demo <- ggplot(pop_data,  aes(fill = pop_category)) +
   theme_void() +
   theme(
     plot.background = element_rect(fill = "white", color = "white"),
-    plot.title = element_text(size = 12, face = "bold", hjust = 0.5, margin = margin(b = 2)),
+    plot.title = element_text(size = 11, face = "bold", hjust = 0.5, margin = margin(b = 2)),
     plot.caption = element_text(size = 7, color = "black", face = "italic", hjust = 0.02),
     legend.title = element_blank(),
     legend.key.size = unit(0.25, "cm"),
@@ -264,4 +267,7 @@ girafe(ggobj = plot_demo) %>%
 
 
 ```
+
+<br>
+
 

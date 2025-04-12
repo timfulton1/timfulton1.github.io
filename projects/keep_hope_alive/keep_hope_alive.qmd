@@ -8,8 +8,6 @@ categories:
 
 ## About
 
-I wrote this white paper while working as a Senior Data Analyst at the National Institute for Student Success (NISS), a higher education consulting agency housed within Georgia State University. 
+I wrote this white paper and performed all data collection and analysis while working as a Senior Data Analyst at the National Institute for Student Success (NISS). The NISS is a higher education consulting agency that helps institutions across the country use evidence-based, data-driven strategies to improve college completion rates for all students. Read more about the NISS and their transformative work here: [https://niss.gsu.edu](https://niss.gsu.edu){.uri target="_blank"}.
 
-<br>
-
-![](KHA_Report.pdf){fig-align="center" width="65%" height="900px"}
+Use this link to view a PDF copy of the white paper in a new window: <a href="KHA_Report.pdf" target="_blank">PDF</a>
