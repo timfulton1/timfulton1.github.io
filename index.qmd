@@ -4,7 +4,7 @@ image: headshot.jpg
 about:
   template: solana
   image-shape: round
-  image-width: 18em
+  image-width: 20em
   #links:
     #- icon: github
       #text: Github
@@ -18,9 +18,9 @@ about:
 
 Hi, I'm Tim. Welcome to my website!
 
-After earning my PhD and completing a postdoctoral fellowship where I studied the physiological factors influencing human performance across the adult lifespan, I transitioned to a career in data science. Given the strong parallels between the scientific method and the data science lifecycle, the shift felt natural, and much of what I learned as a researcher transferred smoothly to the data science world.
+After earning my PhD and completing a postdoctoral fellowship where I studied the physiological factors influencing human performance across the adult lifespan, I transitioned to a career in data science. This shift felt natural given the strong parallels between the scientific method and the data science lifecycle, and much of what I learned as a researcher - asking the right questions, digging into the data, and using evidence to find answers - transferred smoothly to the data science world.
 
-I enjoy exploring data to uncover patterns and using statistics to answer business and research questions. I also excel in creating visualizations that tell compelling stories and writing reports that clearly communicate my findings. Additionally, I like developing tools that allow others to efficiently analyze their own data, as well as teaching data science skills that empower people to complete their own data projects.
+I enjoy exploring data to uncover patterns, using statistics to answer business questions, and creating visualizations and reports that engagingly communicate the findings. Additionally, I like developing tools that allow others to efficiently analyze their own data and teaching data science skills that empower people to complete their own data projects.
 
 Throughout the site you will find examples of my work, including data visualizations, Shiny applications, scrollytelling, and written reports. Please message me on LinkedIn with any questions or if you'd like to connect.
 
