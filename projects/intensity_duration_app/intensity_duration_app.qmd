@@ -3,6 +3,7 @@ title: "Critical Power/Speed Calculator"
 image: "intensity_duration_app_image.png"
 categories:
   - Shiny App
+  - Calculator
   - Cycling
   - Running
   - Physiology

@@ -9,6 +9,8 @@ listing:
     - "aging_cs/*.qmd"
     - "nitric_oxide_app/*.qmd"
     - "keep_hope_alive/*.qmd"
+    - "total_rewards_app/*.qmd"
+
   type: grid
   categories: numbered
   max-description-length: 245

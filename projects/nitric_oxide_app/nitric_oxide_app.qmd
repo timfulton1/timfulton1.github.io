@@ -8,7 +8,7 @@ categories:
 
 ## About
 
-I developed this app during my postdoctoral fellowship for the analysis of blood plasma nitric oxide (NO) concentrations obtained using chemiluminescence.
+I developed this app to analyze blood plasma nitric oxide (NO) concentrations obtained using chemiluminescence.
 
 ## Methods
 

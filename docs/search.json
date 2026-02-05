@@ -102,7 +102,7 @@
     "href": "projects/projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Some of my data science and research projects\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCritical Power/Speed Calculator\n\n\n\nShiny App\n\n\nCycling\n\n\nRunning\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Super Spike Era: How Shoes Are Redefining the NCAA Mile\n\n\n\nData Journalism\n\n\nScrollytelling\n\n\nQuarto\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeoxyhemoglobin Analysis\n\n\n\nShiny App\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNCAA Cross Country Championships Dashboard\n\n\n\nShiny App\n\n\nDashboard\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAging & Critical Speed Research Paper\n\n\n\nResearch Paper\n\n\nPhysiology\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNitric Oxide Analysis\n\n\n\nShiny App\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKeep Hope Alive White Paper\n\n\n\nWhite Paper\n\n\nStudent Success\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Some of my data science and research projects\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCritical Power/Speed Calculator\n\n\n\nShiny App\n\n\nCalculator\n\n\nCycling\n\n\nRunning\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Super Spike Era: How Shoes Are Redefining the NCAA Mile\n\n\n\nData Journalism\n\n\nScrollytelling\n\n\nQuarto\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeoxyhemoglobin Analysis\n\n\n\nShiny App\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNCAA Cross Country Championships Dashboard\n\n\n\nShiny App\n\n\nDashboard\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAging & Critical Speed Research Paper\n\n\n\nResearch Paper\n\n\nPhysiology\n\n\nRunning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNitric Oxide Analysis\n\n\n\nShiny App\n\n\nPhysiology\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKeep Hope Alive White Paper\n\n\n\nWhite Paper\n\n\nStudent Success\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTotal Rewards Calculator\n\n\n\nPower BI\n\n\nCalculator\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/aging_cs/aging_cs.html",
@@ -130,14 +130,14 @@
     "href": "projects/hhb_app/hhb_app.html",
     "title": "Deoxyhemoglobin Analysis",
     "section": "",
-    "text": "This app performs kinetic modeling of deoxyhemoglobin (HHb) data obtained using near-infrared spectroscopy. The metrics that are calculated provide estimates of microvascular function during the transition from rest to exercise.\nI developed the app during my postdoctoral fellowship to improve data analysis accuracy and efficiency. Prior to using this app the research lab was using a software called SigmaPlot to perform the analysis. Although SigmaPlot is commonly used in research labs for modeling and graphing, it requires the user to click through a long sequence of prompts; thus, it takes more time and is prone to user error. The software licenses are also relatively expensive. Switching to this app cut our analysis time in half (at least) and improved data quality."
+    "text": "This app performs kinetic modeling of deoxyhemoglobin (HHb) data obtained using near-infrared spectroscopy. The metrics that are calculated provide estimates of microvascular function during the transition from rest to exercise.\nI developed the app to improve data analysis accuracy and efficiency. Prior to using this app the research lab I was working in was using a software called SigmaPlot to perform the analysis. Although SigmaPlot is commonly used in research labs for modeling and graphing, it requires the user to click through a long sequence of prompts; thus, it takes more time and is prone to user error. The software licenses are also relatively expensive. Switching to this app cut our analysis time in half and improved data quality."
   },
   {
     "objectID": "projects/hhb_app/hhb_app.html#about",
     "href": "projects/hhb_app/hhb_app.html#about",
     "title": "Deoxyhemoglobin Analysis",
     "section": "",
-    "text": "This app performs kinetic modeling of deoxyhemoglobin (HHb) data obtained using near-infrared spectroscopy. The metrics that are calculated provide estimates of microvascular function during the transition from rest to exercise.\nI developed the app during my postdoctoral fellowship to improve data analysis accuracy and efficiency. Prior to using this app the research lab was using a software called SigmaPlot to perform the analysis. Although SigmaPlot is commonly used in research labs for modeling and graphing, it requires the user to click through a long sequence of prompts; thus, it takes more time and is prone to user error. The software licenses are also relatively expensive. Switching to this app cut our analysis time in half (at least) and improved data quality."
+    "text": "This app performs kinetic modeling of deoxyhemoglobin (HHb) data obtained using near-infrared spectroscopy. The metrics that are calculated provide estimates of microvascular function during the transition from rest to exercise.\nI developed the app to improve data analysis accuracy and efficiency. Prior to using this app the research lab I was working in was using a software called SigmaPlot to perform the analysis. Although SigmaPlot is commonly used in research labs for modeling and graphing, it requires the user to click through a long sequence of prompts; thus, it takes more time and is prone to user error. The software licenses are also relatively expensive. Switching to this app cut our analysis time in half and improved data quality."
   },
   {
     "objectID": "projects/hhb_app/hhb_app.html#methods",
@@ -207,14 +207,14 @@
     "href": "projects/nitric_oxide_app/nitric_oxide_app.html",
     "title": "Nitric Oxide Analysis",
     "section": "",
-    "text": "I developed this app during my postdoctoral fellowship for the analysis of blood plasma nitric oxide (NO) concentrations obtained using chemiluminescence."
+    "text": "I developed this app to analyze blood plasma nitric oxide (NO) concentrations obtained using chemiluminescence."
   },
   {
     "objectID": "projects/nitric_oxide_app/nitric_oxide_app.html#about",
     "href": "projects/nitric_oxide_app/nitric_oxide_app.html#about",
     "title": "Nitric Oxide Analysis",
     "section": "",
-    "text": "I developed this app during my postdoctoral fellowship for the analysis of blood plasma nitric oxide (NO) concentrations obtained using chemiluminescence."
+    "text": "I developed this app to analyze blood plasma nitric oxide (NO) concentrations obtained using chemiluminescence."
   },
   {
     "objectID": "projects/nitric_oxide_app/nitric_oxide_app.html#methods",
@@ -243,5 +243,19 @@
     "title": "Office Hours",
     "section": "",
     "text": "A collection of tutorials\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDumbbell Visualization Tutorial\n\n\n\n\n\n\nVisualization\n\n\nStudent Success\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/total_rewards_app/total_rewards_app.html",
+    "href": "projects/total_rewards_app/total_rewards_app.html",
+    "title": "Total Rewards Calculator",
+    "section": "",
+    "text": "This is an example Power BI report that calculates annual wages, employer paid benefits, total compensation, and leave days. It is modeled off a real project request I completed with a human resources team. Only a screenshot of the report is available at this time."
+  },
+  {
+    "objectID": "projects/total_rewards_app/total_rewards_app.html#about",
+    "href": "projects/total_rewards_app/total_rewards_app.html#about",
+    "title": "Total Rewards Calculator",
+    "section": "",
+    "text": "This is an example Power BI report that calculates annual wages, employer paid benefits, total compensation, and leave days. It is modeled off a real project request I completed with a human resources team. Only a screenshot of the report is available at this time."
   }
 ]
