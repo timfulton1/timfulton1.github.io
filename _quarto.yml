@@ -5,6 +5,9 @@ project:
 website:
   title: "Tim Fulton"
   open-graph: true 
+  google-analytics: "G-M6BSS2J4BL"
+  cookie-consent:
+    style: simple
   page-footer: 
     center: Made with [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank}, [Quarto](https://quarto.org/){target=_blannk}, and [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/timfulton1){target=_blank}
   navbar:
