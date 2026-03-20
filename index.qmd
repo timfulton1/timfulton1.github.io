@@ -18,7 +18,7 @@ about:
 
 Hi, I'm Tim. Welcome to my website!
 
-After earning my PhD in physiology I transitioned to a career in data science. This shift felt natural given the strong parallels between the scientific method and the data science life cycle, and much of what I learned as a researcher - asking the right questions, rigorously analyzing the data, and translating evidence into conclusions - carried over smoothly to the data science world. 
+After earning my PhD in physiology I transitioned to a career in data science. This shift felt natural given the strong parallels between the scientific method and the data science life cycle, and much of what I learned as a researcher (asking the right questions, rigorously analyzing data, translating evidence into conclusions, and clearly communicating the results) carried over smoothly to the data science world. 
 
 Throughout the site you will find examples of my open-source work, including data visualizations, web applications, dashboards, and written reports. Please message me on LinkedIn with any questions or if you'd like to connect.
 
